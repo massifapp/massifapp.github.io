@@ -40,6 +40,18 @@
   .heads-up li { margin: 12px 0; }
   .rare, .why { font-size: 15px; margin: 16px 0 0; }
   .why { color: #68768A; }
+  /* The one claim on the page that someone else vouches for, so it gets the
+     weight — the hash and key below are for the few who check by hand. */
+  .proof { margin: 20px 0 0; padding-top: 18px; color: #E8ECF2;
+           border-top: 1px solid #2A3547; font-size: 16px; }
+  .proof a { color: #E8ECF2; font-weight: 600; text-decoration: none;
+             border-bottom: 1px solid #4A5768; }
+  .tick { display: inline-block; width: 21px; height: 21px; line-height: 21px;
+          text-align: center; border-radius: 50%; background: #E8ECF2;
+          color: #0E1420; font-size: 12px; font-weight: 700;
+          margin-right: 8px; vertical-align: 1px; }
+  .proof-sub { display: inline-block; margin-top: 8px; color: #68768A;
+               font-size: 13px; }
   .verify { color: #68768A; font-size: 13px; line-height: 1.8;
             margin-top: 56px; text-align: left;
             border-top: 1px solid #1C2536; padding-top: 28px; }
@@ -85,6 +97,12 @@
     <p class="why">All three happen because Massif isn't on Google Play, not
     because anything is wrong with the app. Android says this about every
     app downloaded straight from a website.</p>
+
+    <p class="proof"><span class="tick">✓</span><a
+      href="https://www.virustotal.com/gui/file/137780ec8b5a77440d990ceff1fd1d69a258032ea507a0eea49420195f887ab5/detection">This
+      exact file, scanned by 66 antivirus engines: 0 detections</a><br>
+      <span class="proof-sub">Not our report to edit — open it and read it
+      yourself.</span></p>
   </section>
 
   <a class="btn" href="https://github.com/massifapp/massif-app/releases/latest/download/massif.apk"
