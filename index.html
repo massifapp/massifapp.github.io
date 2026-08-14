@@ -20,6 +20,16 @@
   .feats { text-align: left; margin: 56px auto 0; color: #B9C2D0; }
   .feats b { color: #E8ECF2; font-weight: 600; }
   .feats p { margin: 14px 0; }
+  .install { text-align: left; margin: 56px auto 0; color: #B9C2D0;
+             border-top: 1px solid #1C2536; padding-top: 32px; }
+  .install h2 { font-size: 17px; color: #E8ECF2; margin: 0 0 12px; }
+  .install b { color: #E8ECF2; font-weight: 600; }
+  .install ol { padding-left: 20px; margin: 16px 0 0; }
+  .install li { margin: 12px 0; }
+  .verify { color: #68768A; font-size: 13px; line-height: 1.8; margin-top: 28px; }
+  .verify code { font-family: ui-monospace, Consolas, monospace; font-size: 11px;
+                 word-break: break-all; color: #B9C2D0; }
+  .verify a { color: #B9C2D0; }
   footer { margin-top: 64px; font-size: 13px; }
   footer a { color: #68768A; }
 </style>
@@ -42,8 +52,7 @@
     Download for Android
   </a>
   <p class="note">Free · no account · no ads · v1.2.0<br>
-  Android asks for confirmation when installing outside a store — that's
-  normal for a direct download.</p>
+  No server and no sign-up — your list lives on your phone.</p>
 
   <svg class="ridge" width="280" height="70" viewBox="0 0 280 70" fill="none">
     <polyline points="0,62 42,34 66,46 104,14 130,30 162,20 196,44 226,10 252,26 280,18"
@@ -59,6 +68,34 @@
     × conditions. No hidden points.</p>
     <p><b>Six ranks, earned.</b> Foothills to Death Zone. One easy stroll
     won't rank you.</p>
+  </div>
+
+  <!-- Update the version, the APK SHA-256 and the release link on every APK
+       release. The signing-key fingerprint stays the same for the life of the
+       app — if it ever changes, no existing install can update, so treat a
+       changed fingerprint as a mistake rather than editing this line. -->
+  <div class="install">
+    <h2>What you'll see when installing</h2>
+    <p>Massif isn't on Google Play, so Android asks a few questions on the
+    way in. None of them mean something is wrong.</p>
+    <ol>
+      <li>Chrome may say the file is <b>not commonly downloaded</b>. Massif
+      is new and few people have it yet. Tap <b>Download anyway</b>.</li>
+      <li>Android asks permission to install apps from Chrome. That's a
+      one-time browser setting, not a permission Massif keeps.</li>
+      <li>Play Protect scans the file and notes it hasn't seen this app
+      before. Let it scan — it takes a few seconds.</li>
+    </ol>
+
+    <p class="verify">
+      Rather check for yourself?<br>
+      APK SHA-256
+      <code>137780ec8b5a77440d990ceff1fd1d69a258032ea507a0eea49420195f887ab5</code><br>
+      Signing key
+      <code>BD:99:3A:83:79:26:A8:14:83:B7:32:24:D3:4C:42:28:C8:38:8B:D8:26:89:DE:7D:EA:32:12:29:E5:35:BB:36</code><br>
+      <a href="https://github.com/massifapp/massif-app/releases/tag/v1.2.0">Release
+      page on GitHub</a> — every build is published there.
+    </p>
   </div>
 
   <footer>
