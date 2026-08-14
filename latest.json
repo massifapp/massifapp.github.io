@@ -1,6 +1,6 @@
 {
-  "version": "1.1.0",
-  "versionCode": 2,
+  "version": "1.2.0",
+  "versionCode": 3,
   "apkUrl": "https://github.com/massifapp/massif-app/releases/latest/download/massif.apk",
-  "notes": "Mark a peak climbed from anywhere, and score winter and shoulder-season ascents. Smoother lists, and every tap now answers."
+  "notes": "Versus: send a friend a link and see both lists compared — score, rank, and every mountain between you. From here on, updates install themselves."
 }
