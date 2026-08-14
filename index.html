@@ -20,13 +20,29 @@
   .feats { text-align: left; margin: 56px auto 0; color: #B9C2D0; }
   .feats b { color: #E8ECF2; font-weight: 600; }
   .feats p { margin: 14px 0; }
-  .install { text-align: left; margin: 56px auto 0; color: #B9C2D0;
-             border-top: 1px solid #1C2536; padding-top: 32px; }
-  .install h2 { font-size: 17px; color: #E8ECF2; margin: 0 0 12px; }
-  .install b { color: #E8ECF2; font-weight: 600; }
-  .install ol { padding-left: 20px; margin: 16px 0 0; }
-  .install li { margin: 12px 0; }
-  .verify { color: #68768A; font-size: 13px; line-height: 1.8; margin-top: 28px; }
+  .free { color: #E8ECF2; font-size: 15px; font-weight: 600;
+          letter-spacing: 2px; margin: 0 0 36px; }
+
+  /* Monochrome leaves no colour to shout with, so the callout earns attention
+     by inversion instead: a white pill on the navy, and a bordered panel that
+     is the only boxed thing on the page. */
+  .heads-up { text-align: left; margin: 0 0 32px; padding: 24px 22px 20px;
+              background: #131B2A; border: 1px solid #2A3547;
+              border-radius: 18px; }
+  .kicker { display: inline-block; background: #E8ECF2; color: #0E1420;
+            font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+            text-transform: uppercase; border-radius: 999px;
+            padding: 5px 13px; margin: 0 0 16px; line-height: 1.4; }
+  .heads-up h2 { font-size: 19px; color: #E8ECF2; margin: 0 0 4px;
+                 line-height: 1.35; }
+  .heads-up b { color: #E8ECF2; font-weight: 600; }
+  .heads-up ol { padding-left: 20px; margin: 16px 0 0; }
+  .heads-up li { margin: 12px 0; }
+  .rare, .why { font-size: 15px; margin: 16px 0 0; }
+  .why { color: #68768A; }
+  .verify { color: #68768A; font-size: 13px; line-height: 1.8;
+            margin-top: 56px; text-align: left;
+            border-top: 1px solid #1C2536; padding-top: 28px; }
   .verify code { font-family: ui-monospace, Consolas, monospace; font-size: 11px;
                  word-break: break-all; color: #B9C2D0; }
   .verify a { color: #B9C2D0; }
@@ -47,12 +63,36 @@
   <h1>The mountain bucket list<br>that scores you.</h1>
   <p class="sub">Log peaks. Earn ranks. Argue about K2.</p>
 
+  <p class="free">Free forever · No ads · No account</p>
+
+  <!-- This block sits ABOVE the button on purpose. As a footnote below the
+       download it was read by nobody, and the people who need it are exactly
+       the ones who have already tapped and are now staring at a warning. -->
+  <section class="heads-up">
+    <p class="kicker">Read first · download below</p>
+    <h2>Android will ask twice. Here's what to tap.</h2>
+    <ol>
+      <li>Chrome says the file is <b>not commonly downloaded</b>. Massif is
+      new and few people have it yet. Tap <b>Download anyway</b>.</li>
+      <li>Android asks permission to install apps from Chrome. Tap
+      <b>Allow</b> — it's a one-time browser setting, not a permission
+      Massif keeps.</li>
+    </ol>
+    <p class="rare">Occasionally Play Protect adds a third one: it says it
+    doesn't recognise the app and offers to block it. Tap <b>More
+    details</b>, then <b>Install anyway</b>. This is rare — it has shown up
+    once across every install and update so far.</p>
+    <p class="why">All three happen because Massif isn't on Google Play, not
+    because anything is wrong with the app. Android says this about every
+    app downloaded straight from a website.</p>
+  </section>
+
   <a class="btn" href="https://github.com/massifapp/massif-app/releases/latest/download/massif.apk"
      onclick="posthog.capture('apk_download_click')">
     Download for Android
   </a>
-  <p class="note">Free · no account · no ads · v1.2.0<br>
-  No server and no sign-up — your list lives on your phone.</p>
+  <p class="note">v1.2.0 · Android · no server and no sign-up — your list
+  lives on your phone.</p>
 
   <svg class="ridge" width="280" height="70" viewBox="0 0 280 70" fill="none">
     <polyline points="0,62 42,34 66,46 104,14 130,30 162,20 196,44 226,10 252,26 280,18"
@@ -74,29 +114,15 @@
        release. The signing-key fingerprint stays the same for the life of the
        app — if it ever changes, no existing install can update, so treat a
        changed fingerprint as a mistake rather than editing this line. -->
-  <div class="install">
-    <h2>What you'll see when installing</h2>
-    <p>Massif isn't on Google Play, so Android asks a few questions on the
-    way in. None of them mean something is wrong.</p>
-    <ol>
-      <li>Chrome may say the file is <b>not commonly downloaded</b>. Massif
-      is new and few people have it yet. Tap <b>Download anyway</b>.</li>
-      <li>Android asks permission to install apps from Chrome. That's a
-      one-time browser setting, not a permission Massif keeps.</li>
-      <li>Play Protect scans the file and notes it hasn't seen this app
-      before. Let it scan — it takes a few seconds.</li>
-    </ol>
-
-    <p class="verify">
-      Rather check for yourself?<br>
-      APK SHA-256
-      <code>137780ec8b5a77440d990ceff1fd1d69a258032ea507a0eea49420195f887ab5</code><br>
-      Signing key
-      <code>BD:99:3A:83:79:26:A8:14:83:B7:32:24:D3:4C:42:28:C8:38:8B:D8:26:89:DE:7D:EA:32:12:29:E5:35:BB:36</code><br>
-      <a href="https://github.com/massifapp/massif-app/releases/tag/v1.2.0">Release
-      page on GitHub</a> — every build is published there.
-    </p>
-  </div>
+  <p class="verify">
+    Rather check than trust?<br>
+    APK SHA-256
+    <code>137780ec8b5a77440d990ceff1fd1d69a258032ea507a0eea49420195f887ab5</code><br>
+    Signing key
+    <code>BD:99:3A:83:79:26:A8:14:83:B7:32:24:D3:4C:42:28:C8:38:8B:D8:26:89:DE:7D:EA:32:12:29:E5:35:BB:36</code><br>
+    <a href="https://github.com/massifapp/massif-app/releases/tag/v1.2.0">Release
+    page on GitHub</a> — every build is published there.
+  </p>
 
   <footer>
     <a href="https://www.tiktok.com/@massif.app">TikTok @massif.app</a> ·
